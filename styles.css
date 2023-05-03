@@ -17,6 +17,7 @@
 {
     height: auto;
     width: 420px;
+    transition: none;
 }
 .about-text
 {
@@ -36,6 +37,8 @@ color: #f6a103;
 font-size: 80px;
 text-transform: capitalize;
 margin-bottom: 20px;
+transition-duration: 5s;
+position: relative;
 }
 .about-text h5 {
     color: #11c9d6;
@@ -43,10 +46,14 @@ margin-bottom: 20px;
     text-transform: capitalize;
 margin-bottom: 25px;
 letter-spacing:2px;
+text-rendering: optimizeSpeed;
+transition: calc(0.9s);
     }
     span
     {
         color:rgb(76, 222, 76);
+        text-rendering: optimizeSpeed;
+        transition:1s;
     }
     .about-text p
     {
@@ -55,6 +62,7 @@ letter-spacing:2px;
         line-height: 28px;
         font-size: 18px;
         margin-bottom:45px;
+        transition: calc(2.5s); 
     }
     button
     {
@@ -69,9 +77,26 @@ letter-spacing:2px;
     }
     button:hover
     {
-        background: transparent;
+        background: rgb(5, 5, 5);
         border:  2px solid rgb(225, 32, 32);
         cursor: help;
+        transition-duration: 1.5s;
     
     }
-    
+    @keyframes  TopToBottom {
+        from {
+            Top: 0;
+        }
+        to {
+            bottom: 300px;
+        }
+    } 
+    .peter {
+        width: 100px;
+        height: 100px;
+        background-color: #4a4948;
+        position: relative;
+        top: 150px;
+        animation-name:TopToBottom;
+        animation-duration: 5s;
+    }
