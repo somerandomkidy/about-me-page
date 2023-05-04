@@ -37,8 +37,9 @@ color: #f6a103;
 font-size: 80px;
 text-transform: capitalize;
 margin-bottom: 20px;
-transition-duration: 5s;
 position: relative;
+animation-name: LeftToRight;
+animation-duration: 5s;
 }
 .about-text h5 {
     color: #11c9d6;
@@ -46,14 +47,11 @@ position: relative;
     text-transform: capitalize;
 margin-bottom: 25px;
 letter-spacing:2px;
-text-rendering: optimizeSpeed;
-transition: calc(0.9s);
     }
     span
     {
         color:rgb(76, 222, 76);
-        text-rendering: optimizeSpeed;
-        transition:1s;
+    
     }
     .about-text p
     {
@@ -61,8 +59,7 @@ transition: calc(0.9s);
         letter-spacing: 1px;
         line-height: 28px;
         font-size: 18px;
-        margin-bottom:45px;
-        transition: calc(2.5s); 
+        margin-bottom:44px;
     }
     button
     {
@@ -73,17 +70,19 @@ transition: calc(0.9s);
         font-weight: bold;
         padding: 13px 30px;
         border-radius: 30px;
-        transition: 1.5;
+        animation-name: BottomToTop;
+        animation-duration: 5s;
     }
     button:hover
     {
         background: rgb(5, 5, 5);
-        border:  2px solid rgb(225, 32, 32);
+        border:  3px solid rgb(225, 32, 32);
         cursor: help;
         transition-duration: 1.5s;
-    
+        text-decoration-color: rgb(237, 13, 13);
+        text-decoration: underline;
     }
-    @keyframes  TopToBottom {
+    @keyframes  TopToBottom {      
         from {
             Top: 0;
         }
@@ -100,3 +99,17 @@ transition: calc(0.9s);
         animation-name:TopToBottom;
         animation-duration: 5s;
     }
+    @keyframes  LeftToRight{      
+        0% {
+            right:5000px;
+        }
+        20%{
+            right: 2000px;
+        }
+        50%{
+    right: 87px;
+        }
+        100%{
+            right:1px;
+        }
+    } 
