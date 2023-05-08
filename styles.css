@@ -38,7 +38,7 @@ font-size: 80px;
 text-transform: capitalize;
 margin-bottom: 20px;
 position: relative;
-animation-name: LeftToRight;
+animation:LeftToRight;
 animation-duration: 5s;
 }
 .about-text h5 {
@@ -60,6 +60,7 @@ letter-spacing:2px;
         line-height: 28px;
         font-size: 18px;
         margin-bottom:44px;
+        animation:  animateSpan 4s 
     }
     button
     {
@@ -96,7 +97,7 @@ letter-spacing:2px;
         background-color: #4a4948;
         position: relative;
         top: 150px;
-        animation-name:TopToBottom;
+        animation:TopToBottom 4s ease-in-out;
         animation-duration: 5s;
     }
     @keyframes  LeftToRight{      
@@ -113,3 +114,20 @@ letter-spacing:2px;
             right:1px;
         }
     } 
+
+
+@keyframes animateSpan
+{
+    0%,50%
+    {
+        opacity:0;
+    }
+    50%
+    {
+        opacity:0.5;
+    }
+    100%
+    {
+        opacity:1;
+    }
+}
